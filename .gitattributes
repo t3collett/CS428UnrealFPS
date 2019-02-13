@@ -1,0 +1,2 @@
+*.uasset filter=lfs diff=lfs merge=lsf -text
+*.umap filter=lfs diff=lfs merge=lsf -text
