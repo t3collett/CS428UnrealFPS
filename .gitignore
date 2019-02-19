@@ -1,3 +1,4 @@
+Build
 Binaries
 DerivedDataCache
 Intermediate
@@ -12,4 +13,7 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
+<<<<<<< Updated upstream
 *.DS_Store
+=======
+>>>>>>> Stashed changes
