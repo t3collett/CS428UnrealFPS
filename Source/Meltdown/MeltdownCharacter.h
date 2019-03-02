@@ -13,13 +13,7 @@ class AMeltdownCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
-	class USkeletalMeshComponent* Mesh1P;
 
-	/** Gun mesh: 1st person view (seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	class USkeletalMeshComponent* FP_Gun;
 
 	/** Location on gun mesh where projectiles should spawn. */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
@@ -52,6 +46,19 @@ protected:
 	virtual void BeginPlay();
 
 public:
+
+	/** Gun mesh: 1st person view (seen only by self) */
+	/** Now seen by those inheriting, courtesy of Mason, biatch*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mesh)
+	class USkeletalMeshComponent* FP_Gun;
+
+	/** Pawn mesh: 1st person view (arms; seen only by self) */
+	/** Now also seen by blueprint, courtesy of Mason */
+	UPROPERTY(BlueprintReadOnly, Category = Mesh)
+	class USkeletalMeshComponent* Mesh1P;
+
+
+
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
