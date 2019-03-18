@@ -54,7 +54,7 @@ public:
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	/** Now also seen by blueprint, courtesy of Mason */
-	UPROPERTY(BlueprintReadOnly, Category = Mesh)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Mesh)
 	class USkeletalMeshComponent* Mesh1P;
 
 
